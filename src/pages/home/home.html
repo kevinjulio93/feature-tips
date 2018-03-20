@@ -1,14 +1,30 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Demo</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openTip()">
+                <ion-icon name="ios-help-circle"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
+<ion-content>
+    <ion-grid fixed padding>
+        <h1>Demo App</h1>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+        <p>Cras pulvinar ipsum non pretium iaculis. Phasellus mollis fringilla dolor nec vehicula. Nullam sapien massa, tincidunt a luctus nec, feugiat nec neque. Curabitur quis commodo odio, ac bibendum augue. Nam ornare lobortis orci, maximus lacinia lectus sagittis in. Vivamus orci risus, malesuada eu dictum id, elementum eu ante. Aliquam in ex massa. Quisque bibendum odio quis arcu ullamcorper, at tempor sapien ultrices. Mauris eu mauris quis nibh hendrerit pulvinar. Sed vitae justo rutrum, iaculis ipsum vel, ultricies metus. Mauris vel mattis diam, at ullamcorper tortor. Cras auctor vestibulum urna et auctor. Duis consectetur nulla nec vehicula porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat.</p>
+
+        <p>Fusce vitae fermentum risus, sed mollis justo. Proin metus lacus, feugiat sit amet tincidunt in, ullamcorper eget ex. Morbi dignissim purus vel justo cursus, non commodo lorem sodales. Suspendisse sem ex, venenatis sed ante a, viverra tempor lectus. Aenean eu magna in arcu imperdiet maximus. Etiam ac enim urna. Sed ac nunc eget ex consectetur condimentum nec sed nulla. Maecenas ullamcorper sem non massa commodo mattis.</p>
+
+        <p>Proin sagittis cursus finibus. Praesent finibus lectus ac lorem imperdiet, at scelerisque risus sodales. Nunc consequat maximus vestibulum. Nullam consectetur, justo non convallis mollis, ipsum tellus sodales libero, ut egestas ex eros at lorem. Integer id mi id lectus laoreet varius. Suspendisse sed consequat tortor. Mauris venenatis dolor sed pellentesque mattis. Maecenas cursus ullamcorper dolor, eu tempus sapien mattis quis. Fusce vestibulum dui arcu, ut faucibus nulla aliquam quis. Proin lacinia quam vel turpis pretium fermentum. Nullam at tempor urna, eleifend lobortis mi.</p>
+    </ion-grid>
+
+    <feature-tip [(show)]="showTip">
+        <h2 class="title">Duis molestie dui leo, tincidunt iaculis sapien feugiat id</h2>
+        <div class="summary">
+            <p>Ut feugiat sem id urna semper, sed blandit nunc consectetur.</p>
+            <p>Donec et convallis risus. Aenean eros odio, luctus ac vulputate quis, eleifend quis odio.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam pellentesque ac ligula vel mollis.</p>
+        </div>
+    </feature-tip>
 </ion-content>

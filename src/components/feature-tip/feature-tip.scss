@@ -1,0 +1,12 @@
+feature-tip {
+    opacity: 0.95;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+
+    .toolbar {
+        .toolbar-background {
+            background: transparent;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<div *ngIf="show" [style.background-color]="color">
+    <ion-toolbar>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="close()" color="light">
+                <ion-icon name="md-close"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+    <div padding>
+        <ng-content select=".title"></ng-content>
+        <button ion-button clear color="light" *ngIf="!expanded" (click)="expand()">Read more&hellip;</button>
+        <ng-content *ngIf="expanded" select=".summary"></ng-content>
+    </div>
+</div>
