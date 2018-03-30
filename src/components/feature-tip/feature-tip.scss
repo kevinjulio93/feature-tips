@@ -3,10 +3,35 @@ feature-tip {
     color: #fff;
     position: fixed;
     bottom: 0;
+    width : 100%;
 
     .toolbar {
         .toolbar-background {
             background: transparent;
+            
         }
     }
+
+    .my-close{
+
+        position: relative;       
+
+        
+        
+    }
+    .toolbar{
+        margin: 0;
+        margin-top: -28%;
+        position: absolute;
+    }
+    #my-curve{
+        margin-bottom: -5px;
+    
+    }
+    .st0{
+        position: relative;
+
+    }
+    
+   
 }

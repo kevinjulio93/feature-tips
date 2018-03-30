@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'feature-tip',
@@ -11,21 +12,25 @@ export class FeatureTipComponent {
     @Output() showChange: EventEmitter<boolean>;
     @Output() expandedChange: EventEmitter<boolean>;
 
-    constructor() {
+    constructor(private storage : Storage) {
         this.showChange = new EventEmitter<boolean>();
         this.expandedChange = new EventEmitter<boolean>();
+        
     }
+
+     
 
     expand() {
         this.expanded = true;
         this.expandedChange.emit(true);
     }
-
+    
     close() {
-        this.show = false;
+        
         this.expanded = false;
 
         this.showChange.emit(false);
         this.expandedChange.emit(false);
+     
     }
 }
