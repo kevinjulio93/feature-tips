@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, transition, animate, style } from '@angular/animations'
 
 
 
 @Component({
     selector: 'page-home',
-    templateUrl: 'home.html'
+    templateUrl: 'home.html',
+    
 })
 export class HomePage implements OnInit {
 

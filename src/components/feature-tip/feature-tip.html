@@ -1,4 +1,4 @@
-<section *ngIf="show">
+<section *ngIf="show" [@slideup]='state' >
     <div id="my-curve">
         <svg viewBox="0 0 2048 2732">
             <path [style.fill]="color" class="st0" d="M2048.5,2732.5H0.5c168.5-143.9,430-331.9,787-469c532.4-204.4,1004.7-190.7,1261-164"/>
@@ -16,9 +16,11 @@
     <div [style.background-color]="color">
         <div padding>
             <ng-content select=".title"></ng-content>
-            <button ion-button clear color="light" *ngIf="!expanded" (click)="expand()">Read more&hellip;</button>
+            <button ion-button clear color="light" *ngIf="!expanded" (click)="expand()  ">Read more&hellip;</button>
             <ng-content *ngIf="expanded" select=".summary"></ng-content>
         </div>
     </div>
+
+    
 
 </section>
